@@ -171,7 +171,7 @@ def process_excel_and_create_word(df, custom_name):
     return output
 
 # --- Streamlit UI ---
-st.title("📊 ComputerShare Supplier Newsletter Creator")
+st.title("📊 Supplier Newsletter Generator")
 
 # 💡 Instructions
 st.markdown("""
@@ -194,7 +194,7 @@ Please ensure your Excel file contains the following columns in **this exact ord
 📌 **Note:** Keep column headers exactly as shown, and ensure there's no extra spacing or typos.
 """)
 
-st.image("https://github.com/Roopam-Ambekar/Newsletter_Creator/blob/main/Example%20arrangement.jpg?raw=true", caption="📄 Example of Correct Excel Format", width = 1000)
+st.image("https://github.com/PureResearchpvt/Newsletter_Generator/blob/main/Example%20arrangement.jpg?raw=true", caption="📄 Example of Correct Excel Format", width = 1000)
 
 # Option selector
 option = st.radio(
@@ -214,7 +214,7 @@ if option == "📂 Upload Excel File":
 elif option == "🌐 Use Google Sheet":
     st.info("Using data from linked Google Sheet.")
     # Replace with your actual Sheet URL
-    sheet_url = "https://docs.google.com/spreadsheets/d/1aErka1fqYFGctlOuXYcjHgfnw9lXMElb7UHqEjh1SWo/export?format=csv"
+    sheet_url = "https://docs.google.com/spreadsheets/d/1fY9K3HRce_WQduodEm1G9OcB1mILYikJCH_uJdz1a2s/export?format=csv"
     try:
         df = pd.read_csv(sheet_url)
     except Exception as e:
